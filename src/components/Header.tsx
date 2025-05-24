@@ -36,6 +36,12 @@ export default function Header() {
           >
             Contact
           </a>
+          <a
+            href="#"
+            className="font-medium text-gray-500 hover:text-emerald-600 transition"
+          >
+            Login
+          </a>
         </nav>
         <button className="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none">
           <svg
