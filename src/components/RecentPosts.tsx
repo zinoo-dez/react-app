@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const posts = [
   {
     title: "The Future of Web Development",
@@ -28,9 +30,9 @@ const posts = [
   },
 ];
 
-export default function RecentPosts () {
+export default function RecentPosts() {
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 bg-gray-100" id="blog">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
           Recent Posts
@@ -41,27 +43,27 @@ export default function RecentPosts () {
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
             >
-              <img
-                className="h-48 w-full object-cover"
-                src={post.imageUrl}
-                alt={post.title}
-              />
+              <Link to={`/posts/${index + 1}`}>
+                <img
+                  className="h-48 w-full object-cover"
+                  src={post.imageUrl}
+                  alt={post.title}
+                />
+              </Link>
               <div className="p-6">
                 <div className="flex items-center mb-2">
                   <span
-                    className={`bg-${
-                      post.category === "Technology"
-                        ? "blue"
-                        : post.category === "Food"
+                    className={`bg-${post.category === "Technology"
+                      ? "blue"
+                      : post.category === "Food"
                         ? "amber"
                         : "green"
-                    }-100 text-${
-                      post.category === "Technology"
+                      }-100 text-${post.category === "Technology"
                         ? "blue"
                         : post.category === "Food"
-                        ? "amber"
-                        : "green"
-                    }-800 text-xs font-semibold px-2.5 py-0.5 rounded`}
+                          ? "amber"
+                          : "green"
+                      }-800 text-xs font-semibold px-2.5 py-0.5 rounded`}
                   >
                     {post.category}
                   </span>
