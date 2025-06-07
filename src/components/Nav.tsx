@@ -94,15 +94,15 @@ export default function Nav() {
                          </div>
                     )}
                </div>
-               <a href="#" className="font-medium text-gray-500 hover:text-emerald-600 transition">
+               <Link to="/about" className="font-medium text-gray-500 hover:text-emerald-600 transition">
                     About
-               </a>
-               <a href="#" className="font-medium text-gray-500 hover:text-emerald-600 transition">
+               </Link>
+               <Link to="/contact" className="font-medium text-gray-500 hover:text-emerald-600 transition">
                     Contact
-               </a>
-               <a href="#" className="font-medium text-gray-500 hover:text-emerald-600 transition">
+               </Link>
+               <Link to="/login" className="font-medium text-gray-500 hover:text-emerald-600 transition">
                     Login
-               </a>
+               </Link>
                <Outlet />
           </nav>
      )

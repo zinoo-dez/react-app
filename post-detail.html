@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The Future of Web Development: What to Expect in 2026 - BlogFolio
+    </title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Custom styles for blog content */
+      .blog-content h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .blog-content h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .blog-content p {
+        margin-bottom: 1.25rem;
+        line-height: 1.7;
+      }
+
+      .blog-content ul,
+      .blog-content ol {
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+      }
+
+      .blog-content ul {
+        list-style-type: disc;
+      }
+
+      .blog-content ol {
+        list-style-type: decimal;
+      }
+
+      .blog-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+
+      .blog-content blockquote {
+        border-left: 4px solid #10b981;
+        padding-left: 1rem;
+        font-style: italic;
+        margin: 1.5rem 0;
+        color: #4b5563;
+      }
+
+      .blog-content pre {
+        background-color: #f3f4f6;
+        padding: 1rem;
+        border-radius: 0.375rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+      }
+
+      .blog-content code {
+        font-family: monospace;
+        background-color: #f3f4f6;
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.25rem;
+      }
+
+      .blog-content img {
+        border-radius: 0.375rem;
+        margin: 1.5rem 0;
+      }
+
+      .blog-content a {
+        color: #10b981;
+        text-decoration: underline;
+      }
+
+      .blog-content a:hover {
+        color: #059669;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="text-2xl font-bold text-emerald-600"
+          >BlogFolio</a
+        >
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="font-medium text-gray-500 hover:text-emerald-600 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-900 hover:text-emerald-600 transition"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-500 hover:text-emerald-600 transition"
+            >Categories</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-500 hover:text-emerald-600 transition"
+            >About</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-500 hover:text-emerald-600 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation (Hidden by default) -->
+      <div class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-base font-medium text-gray-500 hover:text-emerald-600"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-emerald-600"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-base font-medium text-gray-500 hover:text-emerald-600"
+            >Categories</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-base font-medium text-gray-500 hover:text-emerald-600"
+            >About</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-base font-medium text-gray-500 hover:text-emerald-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 md:py-12">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Blog Post Content -->
+        <div class="lg:w-2/3">
+          <!-- Breadcrumbs -->
+          <nav class="text-sm mb-6">
+            <ol class="flex items-center space-x-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-500 hover:text-emerald-600"
+                  >Home</a
+                >
+              </li>
+              <li class="text-gray-500">/</li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-emerald-600"
+                  >Blog</a
+                >
+              </li>
+              <li class="text-gray-500">/</li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-emerald-600"
+                  >Technology</a
+                >
+              </li>
+              <li class="text-gray-500">/</li>
+              <li class="text-gray-800 font-medium">
+                The Future of Web Development
+              </li>
+            </ol>
+          </nav>
+
+          <!-- Post Header -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <img
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              alt="The Future of Web Development"
+              class="w-full h-64 md:h-80 object-cover"
+            />
+            <div class="p-6 md:p-8">
+              <div class="flex items-center mb-4">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                  >Technology</span
+                >
+                <span class="mx-2 text-gray-300">•</span>
+                <span class="text-gray-500 text-sm">May 12, 2025</span>
+                <span class="mx-2 text-gray-300">•</span>
+                <span class="text-gray-500 text-sm">10 min read</span>
+              </div>
+              <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                The Future of Web Development: What to Expect in 2026
+              </h1>
+              <div class="flex items-center">
+                <img
+                  class="h-10 w-10 rounded-full mr-4"
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Alex Chen"
+                />
+                <div>
+                  <a
+                    href="author-profile.html"
+                    class="font-medium hover:text-emerald-600"
+                    >Alex Chen</a
+                  >
+                  <p class="text-gray-500 text-sm">
+                    Senior Tech Writer & Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post Content -->
+          <div class="bg-white rounded-xl shadow-md p-6 md:p-8 mb-8">
+            <div class="blog-content text-gray-700">
+              <p class="font-medium text-lg">
+                As we approach 2026, the web development landscape continues to
+                evolve at a rapid pace. In this article, I explore the emerging
+                technologies and trends that will shape the future of web
+                development.
+              </p>
+
+              <h2>The Rise of AI-Powered Development</h2>
+              <p>
+                Artificial Intelligence is no longer just a buzzword in web
+                development. By 2026, we expect to see AI deeply integrated into
+                the development workflow. Code assistants will evolve beyond
+                simple autocomplete to understand project context and suggest
+                entire solutions to complex problems.
+              </p>
+
+              <p>Here are some ways AI will transform web development:</p>
+              <ul>
+                <li>Automated code generation for repetitive tasks</li>
+                <li>
+                  Intelligent debugging that not only identifies issues but
+                  suggests fixes
+                </li>
+                <li>UI/UX recommendations based on user behavior analysis</li>
+                <li>Performance optimization through predictive analytics</li>
+              </ul>
+
+              <img
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095"
+                alt="AI in Development"
+                class="w-full"
+              />
+
+              <h2>WebAssembly: The New Standard</h2>
+              <p>
+                WebAssembly (Wasm) has been gaining traction, and by 2026, it
+                will become a standard technology in web development. This
+                binary instruction format provides near-native performance for
+                web applications, enabling complex applications that were
+                previously impossible to run efficiently in browsers.
+              </p>
+
+              <blockquote>
+                "WebAssembly is not just about performance; it's about bringing
+                the entire ecosystem of programming languages to the web." —
+                Sarah Johnson, WebAssembly Core Team
+              </blockquote>
+
+              <p>
+                The ability to use languages like C++, Rust, and Go directly in
+                web applications will open new possibilities for web developers
+                and blur the line between web and native applications.
+              </p>
+
+              <h2>Edge Computing Takes Center Stage</h2>
+              <p>
+                By 2026, edge computing will be a fundamental part of web
+                architecture. Instead of processing everything in centralized
+                data centers, computation will happen closer to the user,
+                reducing latency and improving performance.
+              </p>
+
+              <p>
+                This shift will require developers to think differently about
+                application architecture:
+              </p>
+              <ol>
+                <li>Distributed state management becomes critical</li>
+                <li>
+                  Serverless functions will be deployed globally at the edge
+                </li>
+                <li>Data synchronization patterns will evolve</li>
+                <li>New frameworks optimized for edge computing will emerge</li>
+              </ol>
+
+              <h2>The End of Traditional JavaScript Frameworks?</h2>
+              <p>
+                While frameworks like React, Vue, and Angular have dominated the
+                landscape, by 2026, we may see a shift toward more lightweight,
+                specialized tools. The "framework fatigue" of the early 2020s
+                will give way to a more modular approach where developers pick
+                smaller, purpose-built libraries rather than committing to
+                monolithic frameworks.
+              </p>
+
+              <p>Here's an example of how component code might look in 2026:</p>
+              <pre><code>// Using a hypothetical future syntax
+component Counter {
+  state count = 0;
+  
+  increment() {
+    this.count++;
+  }
+  
+  render() {
+    return `
+      &lt;div class="counter">
+        &lt;p>Count: ${this.count}&lt;/p>
+        &lt;button @click="increment()">Increment&lt;/button>
+      &lt;/div>
+    `;
+  }
+}</code></pre>
+
+              <h2>Accessibility as a Core Requirement</h2>
+              <p>
+                By 2026, accessibility will no longer be an afterthought but a
+                core requirement for all web projects. This shift will be driven
+                by both regulatory requirements and a broader understanding of
+                the importance of inclusive design.
+              </p>
+
+              <p>
+                Development tools will integrate accessibility testing at every
+                stage, and frameworks will include accessible components by
+                default. The result will be a more inclusive web for everyone.
+              </p>
+
+              <h2>Conclusion</h2>
+              <p>
+                The web development landscape of 2026 will be characterized by
+                AI assistance, WebAssembly performance, edge computing
+                architecture, modular tooling, and built-in accessibility.
+                Developers who start preparing for these changes now will be
+                well-positioned for the future.
+              </p>
+
+              <p>
+                What trends do you think will shape web development in the
+                coming years? Share your thoughts in the comments below!
+              </p>
+            </div>
+
+            <!-- Tags -->
+            <div class="mt-8 pt-6 border-t">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-sm font-medium text-gray-700 mr-2"
+                  >Tags:</span
+                >
+                <a
+                  href="#"
+                  class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded hover:bg-gray-200"
+                  >Web Development</a
+                >
+                <a
+                  href="#"
+                  class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded hover:bg-gray-200"
+                  >JavaScript</a
+                >
+                <a
+                  href="#"
+                  class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded hover:bg-gray-200"
+                  >AI</a
+                >
+                <a
+                  href="#"
+                  class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded hover:bg-gray-200"
+                  >WebAssembly</a
+                >
+                <a
+                  href="#"
+                  class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded hover:bg-gray-200"
+                  >Edge Computing</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Share and Reactions -->
+          <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between"
+            >
+              <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <button
+                  class="flex items-center space-x-2 text-gray-500 hover:text-emerald-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                  <span>142 Likes</span>
+                </button>
+                <button
+                  class="flex items-center space-x-2 text-gray-500 hover:text-emerald-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    />
+                  </svg>
+                  <span>38 Comments</span>
+                </button>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span class="text-sm font-medium text-gray-700">Share:</span>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-blue-600"
+                  aria-label="Share on Twitter"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-blue-800"
+                  aria-label="Share on Facebook"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-blue-500"
+                  aria-label="Share on LinkedIn"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-red-600"
+                  aria-label="Share on Pinterest"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <button
+                  class="text-gray-500 hover:text-emerald-600"
+                  aria-label="Copy link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author Bio -->
+          <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <div
+              class="flex flex-col sm:flex-row items-center sm:items-start gap-4"
+            >
+              <img
+                class="h-20 w-20 rounded-full"
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Alex Chen"
+              />
+              <div>
+                <h3 class="text-lg font-bold mb-2">
+                  Written by
+                  <a
+                    href="author-profile.html"
+                    class="text-emerald-600 hover:underline"
+                    >Alex Chen</a
+                  >
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Alex is a passionate tech writer with over 10 years of
+                  experience in web development. He loves sharing his knowledge
+                  about the latest technologies and helping others learn to
+                  code.
+                </p>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-emerald-600 transition"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-emerald-600 transition"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-emerald-600 transition"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h3 class="text-xl font-bold mb-6">Comments (38)</h3>
+
+            <!-- Comment Form -->
+            <div class="mb-8">
+              <div class="flex items-start gap-4">
+                <img
+                  class="h-10 w-10 rounded-full"
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Your Avatar"
+                />
+                <div class="flex-grow">
+                  <textarea
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    rows="3"
+                    placeholder="Add a comment..."
+                  ></textarea>
+                  <div class="mt-2 flex justify-end">
+                    <button
+                      class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-4 py-2 rounded-lg shadow-sm transition"
+                    >
+                      Post Comment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comments List -->
+            <div class="space-y-6">
+              <!-- Comment 1 -->
+              <div class="flex gap-4">
+                <img
+                  class="h-10 w-10 rounded-full"
+                  src="https://randomuser.me/api/portraits/women/17.jpg"
+                  alt="Sarah Johnson"
+                />
+                <div class="flex-grow">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <div>
+                        <span class="font-medium">Sarah Johnson</span>
+                        <span class="text-gray-500 text-sm ml-2"
+                          >2 days ago</span
+                        >
+                      </div>
+                      <button class="text-gray-400 hover:text-gray-600">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="text-gray-700">
+                      Great article! I'm particularly excited about the
+                      potential of WebAssembly. The performance gains could be
+                      game-changing for complex web applications.
+                    </p>
+                    <div class="mt-3 flex items-center space-x-4 text-sm">
+                      <button
+                        class="flex items-center text-gray-500 hover:text-emerald-600"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 mr-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                          />
+                        </svg>
+                        <span>24</span>
+                      </button>
+                      <button
+                        class="flex items-center text-gray-500 hover:text-emerald-600"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 mr-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2"
+                          />
+                        </svg>
+                        <span>2</span>
+                      </button>
+                      <button class="text-gray-500 hover:text-emerald-600">
+                        Reply
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Nested Reply -->
+                  <div class="mt-4 ml-6">
+                    <div class="flex gap-4">
+                      <img
+                        class="h-8 w-8 rounded-full"
+                        src="https://randomuser.me/api/portraits/men/32.jpg"
+                        alt="Alex Chen"
+                      />
+                      <div class="flex-grow">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                          <div class="flex items-center justify-between mb-2">
+                            <div>
+                              <span class="font-medium">Alex Chen</span>
+                              <span class="text-emerald-600 text-xs ml-1"
+                                >(Author)</span
+                              >
+                              <span class="text-gray-500 text-sm ml-2"
+                                >1 day ago</span
+                              >
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                          <p class="text-gray-700">
+                            Thanks, Sarah! I agree - WebAssembly is going to be
+                            transformative. I'm working on a follow-up article
+                            that goes deeper into specific use cases.
+                          </p>
+                          <div class="mt-3 flex items-center space-x-4 text-sm">
+                            <button
+                              class="flex items-center text-gray-500 hover:text-emerald-600"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 mr-1"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                                />
+                              </svg>
+                              <span>12</span>
+                            </button>
+                            <button
+                              class="flex items-center text-gray-500 hover:text-emerald-600"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 mr-1"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2"
+                                />
+                              </svg>
+                              <span>0</span>
+                            </button>
+                            <button
+                              class="text-gray-500 hover:text-emerald-600"
+                            >
+                              Reply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comment 2 -->
+              <div class="flex gap-4">
+                <img
+                  class="h-10 w-10 rounded-full"
+                  src="https://randomuser.me/api/portraits/men/67.jpg"
+                  alt="James Wilson"
+                />
+                <div class="flex-grow">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <div>
+                        <span class="font-medium">James Wilson</span>
+                        <span class="text-gray-500 text-sm ml-2"
+                          >3 days ago</span
+                        >
+                      </div>
+                      <button class="text-gray-400 hover:text-gray-600">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="text-gray-700">
+                      I'm skeptical about the "end of traditional JavaScript
+                      frameworks" prediction. React has shown incredible staying
+                      power and continues to evolve. What makes you think
+                      developers will move away from these established
+                      ecosystems?
+                    </p>
+                    <div class="mt-3 flex items-center space-x-4 text-sm">
+                      <button
+                        class="flex items-center text-gray-500 hover:text-emerald-600"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 mr-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                          />
+                        </svg>
+                        <span>8</span>
+                      </button>
+                      <button
+                        class="flex items-center text-gray-500 hover:text-emerald-600"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 mr-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2"
+                          />
+                        </svg>
+                        <span>1</span>
+                      </button>
+                      <button class="text-gray-500 hover:text-emerald-600">
+                        Reply
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View More Comments Button -->
+              <div class="text-center pt-4">
+                <button
+                  class="text-emerald-600 hover:text-emerald-700 font-medium"
+                >
+                  View More Comments
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Posts -->
+          <div class="mb-8">
+            <h3 class="text-xl font-bold mb-6">Related Posts</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Related Post 1 -->
+              <div
+                class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+              >
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+                  alt="Code on screen"
+                />
+                <div class="p-4">
+                  <div class="flex items-center mb-2">
+                    <span
+                      class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                      >JavaScript</span
+                    >
+                  </div>
+                  <h4 class="font-bold mb-2">
+                    10 JavaScript Tricks That Will Blow Your Mind
+                  </h4>
+                  <p class="text-gray-600 text-sm mb-3 line-clamp-2">
+                    JavaScript is full of surprises and powerful features that
+                    many developers aren't aware of. In this article, I share 10
+                    advanced JavaScript techniques...
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-gray-500 text-xs">May 5, 2025</span>
+                    <a
+                      href="#"
+                      class="text-emerald-600 hover:text-emerald-700 text-sm font-medium"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Related Post 2 -->
+              <div
+                class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+              >
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095"
+                  alt="AI concept"
+                />
+                <div class="p-4">
+                  <div class="flex items-center mb-2">
+                    <span
+                      class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                      >AI</span
+                    >
+                  </div>
+                  <h4 class="font-bold mb-2">
+                    How AI is Transforming Web Development in 2025
+                  </h4>
+                  <p class="text-gray-600 text-sm mb-3 line-clamp-2">
+                    Artificial Intelligence is revolutionizing how we build
+                    websites and web applications. In this article, I explore
+                    the latest AI tools and technologies...
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-gray-500 text-xs">April 15, 2025</span>
+                    <a
+                      href="#"
+                      class="text-emerald-600 hover:text-emerald-700 text-sm font-medium"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:w-1/3 space-y-8">
+          <!-- Search -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-lg font-bold mb-4">Search</h3>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search articles..."
+                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+              />
+              <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Posts -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-lg font-bold mb-4">Recent Posts</h3>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <img
+                  class="h-16 w-16 object-cover rounded-md"
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+                  alt="JavaScript Tricks"
+                />
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >10 JavaScript Tricks That Will Blow Your Mind</a
+                    >
+                  </h4>
+                  <p class="text-gray-500 text-xs mt-1">May 5, 2025</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <img
+                  class="h-16 w-16 object-cover rounded-md"
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+                  alt="Career Development"
+                />
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >From Junior to Senior Developer: A Roadmap for Success</a
+                    >
+                  </h4>
+                  <p class="text-gray-500 text-xs mt-1">April 28, 2025</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <img
+                  class="h-16 w-16 object-cover rounded-md"
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095"
+                  alt="AI in Development"
+                />
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >How AI is Transforming Web Development in 2025</a
+                    >
+                  </h4>
+                  <p class="text-gray-500 text-xs mt-1">April 15, 2025</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <img
+                  class="h-16 w-16 object-cover rounded-md"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                  alt="Scalable Web Applications"
+                />
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >Building Scalable Web Applications: A Comprehensive
+                      Guide</a
+                    >
+                  </h4>
+                  <p class="text-gray-500 text-xs mt-1">March 10, 2025</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <img
+                  class="h-16 w-16 object-cover rounded-md"
+                  src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613"
+                  alt="React Hooks"
+                />
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >Advanced React Hooks: Patterns and Best Practices</a
+                    >
+                  </h4>
+                  <p class="text-gray-500 text-xs mt-1">March 2, 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Most Read Posts -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-lg font-bold mb-4">Most Read Posts</h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-emerald-100 text-emerald-800 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0"
+                >
+                  1
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >From Junior to Senior Developer: A Roadmap for Success</a
+                    >
+                  </h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>42.5K views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-emerald-100 text-emerald-800 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0"
+                >
+                  2
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >10 JavaScript Tricks That Will Blow Your Mind</a
+                    >
+                  </h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>38.2K views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-emerald-100 text-emerald-800 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0"
+                >
+                  3
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >Building Scalable Web Applications: A Comprehensive
+                      Guide</a
+                    >
+                  </h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>29.7K views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-emerald-100 text-emerald-800 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0"
+                >
+                  4
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >How AI is Transforming Web Development in 2025</a
+                    >
+                  </h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>24.3K views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="bg-emerald-100 text-emerald-800 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0"
+                >
+                  5
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm line-clamp-2">
+                    <a href="#" class="hover:text-emerald-600"
+                      >Advanced React Hooks: Patterns and Best Practices</a
+                    >
+                  </h4>
+                  <div class="flex items-center text-xs text-gray-500 mt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>19.8K views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-lg font-bold mb-4">Categories</h3>
+            <div class="space-y-2">
+              <a
+                href="#"
+                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-emerald-50 transition"
+              >
+                <span class="font-medium">JavaScript</span>
+                <span
+                  class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                  >42</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
