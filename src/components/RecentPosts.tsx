@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Post } from "../types/type";
+import { useState } from "react";
 
 // const randomNumber = Math.floor(Math.random() * 100)
 // console.log(randomNumber)
@@ -35,6 +36,17 @@ import type { Post } from "../types/type";
 // ];
 
 export default function RecentPosts({ posts }: { posts: Post[] }) {
+  const [visiblePosts, setVisiblePosts] = useState<number>(3);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const loadMorePosts = () => {
+    setIsLoading(true);
+    // for testing code(setTimeOut)
+    setTimeout(() => {
+      setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 3);
+      setIsLoading(false);
+    }, 800);
+  };
   return (
     <section className="py-12 bg-gray-100" id="blog">
       <div className="container mx-auto px-4">
@@ -42,7 +54,7 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
           Recent Posts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.slice(0, 3).map((post, index) => (
+          {posts.slice(0, visiblePosts).map((post, index) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
@@ -89,14 +101,43 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
             </div>
           ))}
         </div>
-        <div className="text-center mt-10">
-          <a
-            href="#"
-            className="inline-block bg-emerald-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-emerald-700 transition"
-          >
-            View All Posts
-          </a>
-        </div>
+        {visiblePosts < posts.length && (
+          <div className="text-center mt-10">
+            <button
+              onClick={loadMorePosts}
+              disabled={isLoading}
+              className="inline-flex items-center justify-center bg-emerald-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-emerald-700 transition min-w-40"
+            >
+              {isLoading ? (
+                <>
+                  <svg
+                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                  Loading...
+                </>
+              ) : (
+                "Load More Posts"
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
