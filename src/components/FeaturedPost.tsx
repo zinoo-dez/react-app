@@ -10,6 +10,7 @@ export default function FeaturedPost({ featuredPosts }: { featuredPosts: Post[] 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
+
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return
@@ -52,8 +53,11 @@ export default function FeaturedPost({ featuredPosts }: { featuredPosts: Post[] 
 
   const currentPost = featuredPosts[currentIndex]
 
+  // console.log(currentPost)
+
   return (
     <section className="py-12 md:py-16">
+
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Featured Posts</h2>
 
@@ -64,11 +68,12 @@ export default function FeaturedPost({ featuredPosts }: { featuredPosts: Post[] 
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
+
             <div className="md:flex">
               <div className="md:flex-shrink-0 relative">
                 <img
                   className="h-48 w-full object-cover md:h-full md:w-64 transition-opacity duration-300"
-                  src={currentPost?.imageUrl || "/placeholder.svg"}
+                  src={"https://placehold.co/400"}
                   alt={currentPost?.title || ""}
                 />
                 <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
@@ -77,7 +82,7 @@ export default function FeaturedPost({ featuredPosts }: { featuredPosts: Post[] 
               </div>
               <div className="p-8 flex-1">
                 <div className="uppercase tracking-wide text-sm text-emerald-600 font-semibold">
-                  {currentPost?.category}
+                  {currentPost?.category?.name}
                 </div>
                 <a
                   href="#"
@@ -85,17 +90,19 @@ export default function FeaturedPost({ featuredPosts }: { featuredPosts: Post[] 
                 >
                   {currentPost?.title}
                 </a>
-                <p className="mt-2 text-gray-600">{currentPost?.description}</p>
+                <p className="mt-2 text-gray-600">{currentPost?.excerpt}</p>
                 <div className="mt-4 flex items-center">
                   <div className="flex-shrink-0">
                     <img
                       className="h-10 w-10 rounded-full"
-                      src={currentPost?.authorImg || "/placeholder.svg"}
-                      alt={currentPost?.author || ""}
+                      src="https://avatar.iran.liara.run/public"
+                      alt={currentPost?.author?.name || ""}
                     />
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">{currentPost?.author || ""}</p>
+                    <p className="text-sm font-medium text-gray-900">
+                      {currentPost?.author?.name}
+                    </p>
                     <p className="text-sm text-gray-500">
                       {currentPost?.date} · {currentPost?.readTime}
                     </p>
@@ -103,6 +110,7 @@ export default function FeaturedPost({ featuredPosts }: { featuredPosts: Post[] 
                 </div>
               </div>
             </div>
+
           </div>
 
           {/* Navigation arrows */}
@@ -146,6 +154,7 @@ export default function FeaturedPost({ featuredPosts }: { featuredPosts: Post[] 
           </div>
         </div>
       </div>
+
     </section>
   )
 }

@@ -11,7 +11,7 @@ export default function Home() {
      const heroPosts: Post =
      {
           title: "The Power of Positive Thinking",
-          description: "Learn how to cultivate a positive mindset and transform your life.",
+          excerpt: "Learn how to cultivate a positive mindset and transform your life.",
           label: "Start Reading",
 
      }
@@ -67,13 +67,15 @@ export default function Home() {
 
      const [loading, setLoading] = useState<boolean>(true)
      const [error, setError] = useState<string | null>(null)
-     const [featuredPosts, setFeaturedPosts] = useState<Post[]>([])
-     console.log(featuredPosts)
+     const [featuredPosts, setFeaturedPosts] = useState<any[]>([])
+     // console.log(featuredPosts)
+     const filteredPosts = featuredPosts.filter((post) => post.is_featured === true)
+     // console.log(filteredPosts)
      const fetchPosts = async () => {
           setLoading(true)
-          await fetch('https://dummyjson.com/posts?limit=5')
+          await fetch('http://localhost:4000/posts')
                .then(res => res.json())
-               .then(data => setFeaturedPosts(data.posts))
+               .then(data => setFeaturedPosts(data))
                .catch(error => setError(error.message))
                .finally(() => setLoading(false))
      }
@@ -90,9 +92,9 @@ export default function Home() {
      }
      return (
           <div className="bg-gray-50 text-gray-800">
-               <HeroSection title={heroPosts.title} description={heroPosts.description} label={heroPosts.label} />
-               <FeaturedPost featuredPosts={featuredPosts} />
-               <RecentPosts />
+               <HeroSection title={heroPosts.title} excerpt={heroPosts.excerpt} label={heroPosts.label} />
+               <FeaturedPost featuredPosts={filteredPosts} />
+               <RecentPosts posts={featuredPosts} />
                <Newsletter />
                <Categories />
           </div>

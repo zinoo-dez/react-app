@@ -1,36 +1,40 @@
 import { Link } from "react-router-dom";
+import type { Post } from "../types/type";
 
-const posts = [
-  {
-    title: "The Future of Web Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    category: "Technology",
-    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    authorName: "Alex Chen",
-    authorImg: "https://randomuser.me/api/portraits/men/32.jpg",
-    date: "May 12, 2025",
-  },
-  {
-    title: "10 Easy Recipes for Beginners",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    category: "Food",
-    imageUrl: "https://images.unsplash.com/photo-1501504905252-473c47e087f8",
-    authorName: "Maria Garcia",
-    authorImg: "https://randomuser.me/api/portraits/women/44.jpg",
-    date: "May 10, 2025",
-  },
-  {
-    title: "5 Morning Habits for Better Health",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    category: "Health",
-    imageUrl: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9",
-    authorName: "James Wilson",
-    authorImg: "https://randomuser.me/api/portraits/men/67.jpg",
-    date: "May 8, 2025",
-  },
-];
+// const randomNumber = Math.floor(Math.random() * 100)
+// console.log(randomNumber)
 
-export default function RecentPosts() {
+// const posts = [
+//   {
+//     title: "The Future of Web Development",
+//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//     category: "Technology",
+//     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+//     authorName: "Alex Chen",
+//     authorImg: `https://randomuser.me/api/portraits/men/${randomNumber}.jpg`,
+//     date: "May 12, 2025",
+//   },
+//   {
+//     title: "10 Easy Recipes for Beginners",
+//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//     category: "Food",
+//     imageUrl: "https://images.unsplash.com/photo-1501504905252-473c47e087f8",
+//     authorName: "Maria Garcia",
+//     authorImg: `https://randomuser.me/api/portraits/women/${randomNumber}.jpg`,
+//     date: "May 10, 2025",
+//   },
+//   {
+//     title: "5 Morning Habits for Better Health",
+//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//     category: "Health",
+//     imageUrl: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9",
+//     authorName: "James Wilson",
+//     authorImg: `https://randomuser.me/api/portraits/men/${randomNumber}.jpg`,
+//     date: "May 8, 2025",
+//   },
+// ];
+
+export default function RecentPosts({ posts }: { posts: Post[] }) {
   return (
     <section className="py-12 bg-gray-100" id="blog">
       <div className="container mx-auto px-4">
@@ -38,7 +42,7 @@ export default function RecentPosts() {
           Recent Posts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
+          {posts.slice(0, 3).map((post, index) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
@@ -46,39 +50,39 @@ export default function RecentPosts() {
               <Link to={`/posts/${index + 1}`}>
                 <img
                   className="h-48 w-full object-cover"
-                  src={post.imageUrl}
+                  src={"https://placehold.co/600x400"}
                   alt={post.title}
                 />
               </Link>
               <div className="p-6">
                 <div className="flex items-center mb-2">
                   <span
-                    className={`bg-${post.category === "Technology"
+                    className={`bg-${post.category?.name === "Technology"
                       ? "blue"
-                      : post.category === "Food"
+                      : post.category?.name === "Food"
                         ? "amber"
                         : "green"
-                      }-100 text-${post.category === "Technology"
+                      }-100 text-${post.category?.name === "Technology"
                         ? "blue"
-                        : post.category === "Food"
+                        : post.category?.name === "Food"
                           ? "amber"
                           : "green"
                       }-800 text-xs font-semibold px-2.5 py-0.5 rounded`}
                   >
-                    {post.category}
+                    {post.category?.name}
                   </span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-                <p className="text-gray-600 mb-4">{post.description}</p>
+                <p className="text-gray-600 mb-4">{post.excerpt}</p>
                 <div className="flex items-center">
                   <img
                     className="h-8 w-8 rounded-full mr-2"
-                    src={post.authorImg}
+                    src={post.author?.profile_image}
                     alt="Author"
                   />
                   <div>
-                    <p className="text-sm font-medium">{post.authorName}</p>
-                    <p className="text-xs text-gray-500">{post.date}</p>
+                    <p className="text-sm font-medium">{post.author?.name}</p>
+                    <p className="text-xs text-gray-500">{post.date ?? new Date().toLocaleDateString()}</p>
                   </div>
                 </div>
               </div>

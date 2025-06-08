@@ -1,6 +1,6 @@
 import type { Post } from "../types/type";
 
-export default function HeroSection({ title, description, label }: Post) {
+export default function HeroSection({ title, excerpt, label }: Post) {
   return (
     <section className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -9,7 +9,7 @@ export default function HeroSection({ title, description, label }: Post) {
             {title}
           </h1>
           <p className="text-xl md:text-2xl mb-8">
-            {description}
+            {excerpt}
           </p>
           <a
             href="#"

@@ -1,24 +1,30 @@
 export interface Post {
   id?: number;
   title: string;
-  description: string;
   label?: string | undefined;
   imageUrl?: string;
-  author?: string;
+  is_featured?: boolean;
+excerpt?: string;
+cover_image?: string;
   authorImg?: string;
   date?: string;
-  category?: string;
+  category?: {
+    id: string;
+    name: string;
+    slug: string;
+  };
   createdAt?: string;
   readTime?: string;
-  // author:{
-  //   name: string;
-  //   avatar: string;
-  //   date: string;
-  //   readTime: string;
-  // }
+  author?: {
+    id: string;
+    name: string;
+    username: string;
+    profile_image: string;
+    date: string;
+  }
 }
 
-export interface FeaturedPost {
+ interface FeaturedPost {
   id: string;
   title: string;
   slug: string;
