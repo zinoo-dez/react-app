@@ -2,10 +2,15 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
-import type { CategoryType } from "../types/type"
+import { useCategories } from '../context/categoryContext';
+// import { useName } from '../context/nameContext';
+import { useAuth } from '../context/authContext';
 
 export default function Header() {
-  const [categories, setCategories] = useState<CategoryType[]>([])
+  const { username, logout } = useAuth()
+  const { categories } = useCategories()
+  // const { name, setName } = useName()
+  console.log('categories', categories)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -17,14 +22,14 @@ export default function Header() {
     setIsDropdownOpen(false)
   }
 
-  const fetchCategories = async () => {
-    await fetch('http://localhost:4000/categories')
-      .then(res => res.json())
-      .then(data => setCategories(data))
-  }
-  useEffect(() => {
-    fetchCategories()
-  }, [])
+  // const fetchCategories = async () => {
+  //   await fetch('http://localhost:3003/categories')
+  //     .then(res => res.json())
+  //     .then(data => setCategories(data))
+  // }
+  // useEffect(() => {
+  //   fetchCategories()
+  // }, [])
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -104,15 +109,32 @@ export default function Header() {
           <Link to="/about" className="font-medium text-gray-500 hover:text-emerald-600 transition">
             About
           </Link>
+          <Link to="/redux" className="font-medium text-gray-500 hover:text-emerald-600 transition">
+            Redux
+          </Link>
           <Link to="/contact" className="font-medium text-gray-500 hover:text-emerald-600 transition">
             Contact
           </Link>
-          <Link to="/login" className="font-medium text-gray-500 hover:text-emerald-600 transition">
-            Login
-          </Link>
+          {
+            !username ? (
+              <Link to="/login" className="font-medium text-gray-500 hover:text-emerald-600 transition">
+                Login
+              </Link>
+            ) : (
+              <>
+                <Link to="/logout" className="font-medium text-gray-500 hover:text-emerald-600 transition capitalize">
+                  {username}
+                </Link>
+                <button onClick={logout} className="font-medium text-gray-500 hover:text-emerald-600 transition">
+                  Logout
+                </button>
+              </>
+            )
+          }
         </nav>
-        <button className="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none">
-          <svg
+        {/* <button onClick={() => setName('rose')} className=" text-gray-500 hover:text-gray-900 focus:outline-none">
+          change name
+         <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
             fill="none"
@@ -120,8 +142,8 @@ export default function Header() {
             stroke="currentColor"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+          </svg> 
+        </button> */}
       </div>
     </header>
   )

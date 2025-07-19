@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import CounterReducer from "../reducer/CounterReducer"
 
 type User = {
      name: string,
@@ -107,10 +108,11 @@ export default function About() {
      return (
           <div className="min-h-screen">
                <h1>This is About</h1>
-               <p>Count: {count}</p>
+               <CounterReducer />
+               {/* <p>Count: {count}</p>
                <p>Name: {name}</p>
                <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-               <br />
+               <br /> */}
                {
                     users.length > 0 ? users.map((user, index) => (
                          <div key={index} className="border border-gray-300 p-4 rounded mb-4">

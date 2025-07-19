@@ -5,15 +5,15 @@ import SidebarCategories from "../components/SidebarCategories";
 import RelatedPost from "../components/RelatedPost";
 import Breadcrumbs from "../components/Breadcrumbs";
 import PostHeader from "../components/PostHeader";
-import PostContent from "../components/PostContent";
 import ShareAndReaction from "../components/ShareAndReaction";
 import AuthorBio from "../components/AuthorBio";
 import PostDetailsComment from "../components/PostDetailsComment";
+import { useName } from "../context/nameContext";
 
 export default function PostDetail() {
-     const { id } = useParams();
-
-     console.log(id);
+     const { id } = useParams(); // destructure the id from useParams
+     // console.log(id);
+     const { name } = useName();
      return (
           //   < !--Main Content-- >
           <div className="container mx-auto px-4 py-8 md:py-12">
@@ -27,7 +27,7 @@ export default function PostDetail() {
                          <PostHeader id={id} />
 
                          {/* <!-- Post Content --> */}
-                         <PostContent />
+                         {/* <PostContent /> */}
 
                          {/* <!-- Share and Reactions --> */}
                          <ShareAndReaction />
@@ -51,7 +51,7 @@ export default function PostDetail() {
 
                          {/* <!-- Most Read Posts --> */}
                          <div className="bg-white rounded-xl shadow-md p-6">
-                              <h3 className="text-lg font-bold mb-4">Most Read Posts</h3>
+                              <h3 className="text-lg font-bold mb-4">Most Read Posts - {name}</h3>
                               <div className="space-y-4">
                                    <div className="flex items-center gap-3">
                                         <div

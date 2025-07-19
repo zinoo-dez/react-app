@@ -6,6 +6,7 @@ import RecentPosts from "../components/RecentPosts";
 import Newsletter from "../components/Newsletter";
 import Categories from "../components/Categories";
 import { useEffect, useState } from "react";
+import CounterReducer from "../reducer/CounterReducer";
 
 export default function Home() {
      const heroPosts: Post =
@@ -73,9 +74,9 @@ export default function Home() {
      // console.log(filteredPosts)
      const fetchPosts = async () => {
           setLoading(true)
-          await fetch('http://localhost:4000/posts')
+          await fetch('http://localhost:3007/api/posts')
                .then(res => res.json())
-               .then(data => setFeaturedPosts(data))
+               .then(data => setFeaturedPosts(data.allPosts))
                .catch(error => setError(error.message))
                .finally(() => setLoading(false))
      }
@@ -93,6 +94,7 @@ export default function Home() {
      return (
           <div className="bg-gray-50 text-gray-800">
                <HeroSection title={heroPosts.title} excerpt={heroPosts.excerpt} label={heroPosts.label} />
+               <CounterReducer />
                <FeaturedPost featuredPosts={filteredPosts} />
                <RecentPosts posts={featuredPosts} />
                <Newsletter />

@@ -59,7 +59,7 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
             >
-              <Link to={`/posts/${index + 1}`}>
+              <Link to={`/posts/${post.id}`}>
                 <img
                   className="h-48 w-full object-cover"
                   src={"https://placehold.co/600x400"}

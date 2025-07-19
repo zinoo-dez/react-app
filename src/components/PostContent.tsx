@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export default function PostContent() {
      return (
@@ -91,23 +91,7 @@ export default function PostContent() {
                          </p>
 
                          <p>Here's an example of how component code might look in 2026:</p>
-                         {/* <pre><code>// Using a hypothetical future syntax
-                                        component Counter {
-                                             state count = 0;
 
-                                        increment() {
-                                             this.count++;
-  }
-
-                                        render() {
-    return `
-      &lt;div className="counter">
-        &lt;p>Count: ${this.count}&lt;/p>
-        &lt;button @click="increment()">Increment&lt;/button>
-      &lt;/div>
-                                        `;
-  }
-}</code></pre> */}
 
                          <h2>Accessibility as a Core Requirement</h2>
                          <p>
